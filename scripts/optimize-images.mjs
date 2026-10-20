@@ -13,6 +13,11 @@ const map = {
     "1_20260209_213836_0000.png": "celebrate-recovery-2026",
     "IMG_8705.png": "restored-table-revival-2026",
     "IMG_8763.jpeg": "resurrection-bash-2026",
+    "new-revival-moments.jpg": "revival-moments-2025",
+    "new-overdose-awareness.webp": "overdose-awareness-day-2026",
+    "new-lumberton-outreach.webp": "lumberton-plaza-outreach-2026",
+    "new-serving-homeless.webp": "serving-the-homeless-2026",
+    "new-pull-up-and-eat.webp": "pull-up-and-eat-2026",
   },
   photos: {
     "DSC_9449.jpeg": "prayer-circle",

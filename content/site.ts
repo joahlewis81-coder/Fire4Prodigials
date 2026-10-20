@@ -7,10 +7,10 @@ export const site = {
   donateUrl: "https://linktr.ee/Fire4Prodigals",
   linktreeUrl: "https://linktr.ee/Fire4Prodigals",
   region: "Located in North Carolina. Serving all over the US.",
-  // TODO: confirm real social links and contact email with the ministry.
+  // TODO: confirm the contact email with the ministry.
   email: "",
-  facebook: "",
-  instagram: "",
+  facebook: "https://www.facebook.com/p/Fire-4-Prodigals-61567851523506/",
+  instagram: "https://www.instagram.com/fire4prodigals/",
 };
 
 export const nav = [

@@ -38,6 +38,25 @@ export default function ContactPage() {
                 </a>
                 <p className="text-bone/60">{site.founders}</p>
               </div>
+              <div className="mt-10 space-y-3">
+                <p className="eyebrow">Follow along</p>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    { href: site.facebook, label: "Facebook" },
+                    { href: site.instagram, label: "Instagram" },
+                  ].map((l) => (
+                    <a
+                      key={l.label}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-11 items-center rounded-full border border-bone/20 px-5 text-sm font-semibold transition-colors duration-500 hover:border-bone hover:bg-bone hover:text-ink"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </Reveal>
           </div>
           <Reveal delay={0.1}>

@@ -73,6 +73,56 @@ export const events: FlyerEvent[] = [
       "Brandon Hamilton shared his testimony at Celebrate Recovery. Snacks at 6:30, childcare provided.",
   },
   {
+    slug: "overdose-awareness-day-2026",
+    title: "Overdose Awareness Day",
+    flyer: "/images/flyers/overdose-awareness-day-2026.webp",
+    sessions: [{ start: "2026-08-29T13:00:00-04:00", end: "2026-08-29T17:00:00-04:00" }],
+    venue: "Changing Paths NC II",
+    address: "205 Martha Ln, Clinton, NC 28328",
+    summary:
+      "Remember. Support. Prevent. Brandon & Melody Hamilton spoke at this free community day with music, resources, bouncy houses, ice cream, and a butterfly release for those lost to overdose.",
+  },
+  {
+    slug: "lumberton-plaza-outreach-2026",
+    title: "Community Outreach at Lumberton Plaza",
+    flyer: "/images/flyers/lumberton-plaza-outreach-2026.webp",
+    sessions: [{ start: "2026-05-30T11:00:00-04:00", end: "2026-05-30T15:00:00-04:00" }],
+    venue: "Lumberton Plaza",
+    address: "Lumberton, NC",
+    summary:
+      "Free food. Real hope. No judgment. Free hotdogs, live music, and local testimonies, with Drew Anderson bringing the Word. Alongside 4PointsNorth, The United Worship Band, Cause We Care, and Rock Bottom Ministries.",
+  },
+  {
+    slug: "pull-up-and-eat-2026",
+    title: "Pull Up and Eat",
+    flyer: "/images/flyers/pull-up-and-eat-2026.webp",
+    sessions: [{ start: "2026-04-04T11:00:00-04:00", end: "2026-04-04T14:00:00-04:00" }],
+    venue: "Rocky Mount",
+    address: "341 McDonald St, Rocky Mount, NC",
+    summary:
+      "Feeding the unhoused community in the park with free food, clothes, Bibles, and prayer, alongside Operation Recovery and Rock Bottom Ministries. If you're struggling and need a meal, it's for you.",
+  },
+  {
+    slug: "serving-the-homeless-2026",
+    title: "Serving the Homeless",
+    flyer: "/images/flyers/serving-the-homeless-2026.webp",
+    sessions: [{ start: "2026-02-21T12:00:00-05:00", end: "2026-02-21T15:00:00-05:00" }],
+    venue: "Fayetteville",
+    address: "128 S King St, Fayetteville, NC 28301",
+    summary:
+      "Being the hands and feet of Jesus with food, clothing, and prayer, alongside The Restored Table and Rock Bottom Ministries.",
+  },
+  {
+    slug: "revival-moments-2025",
+    title: "Revival Moments & Testimonial Service",
+    flyer: "/images/flyers/revival-moments-2025.webp",
+    sessions: [{ start: "2025-10-25T11:00:00-04:00" }],
+    venue: "Sunshine's Faith Over Fear Ministries",
+    address: "605 Depot Street, Rockwell, NC 28138",
+    summary:
+      "Healing, prayer, worship, and deliverance with Sunshine & SJ, guest speaker Kristy, and Evangelist Brandon Hamilton & Melody. Free food, drinks, and care packages.",
+  },
+  {
     slug: "resurrection-bash-2026",
     title: "Resurrection Bash",
     flyer: "/images/flyers/resurrection-bash-2026.webp",

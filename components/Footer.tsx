@@ -40,6 +40,16 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <a href={site.facebook} target="_blank" rel="noopener noreferrer" className="link-underline hover:text-bone">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href={site.instagram} target="_blank" rel="noopener noreferrer" className="link-underline hover:text-bone">
+                Instagram
+              </a>
+            </li>
+            <li>
               <a href={site.linktreeUrl} target="_blank" rel="noopener noreferrer" className="link-underline hover:text-bone">
                 All our links
               </a>

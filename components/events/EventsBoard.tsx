@@ -71,7 +71,7 @@ export function EventsBoard({ events, builtAt }: { events: FlyerEvent[]; builtAt
               New events are on the way. Check back soon.
             </p>
           ) : (
-            <ul className="columns-1 gap-8 sm:columns-2 lg:columns-3 [&>li]:mb-12 [&>li]:break-inside-avoid">
+            <ul className="grid grid-cols-1 items-start gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
               {list.map((e, i) => (
                 <motion.li
                   key={e.slug}

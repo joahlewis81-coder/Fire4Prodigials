@@ -3,9 +3,13 @@ import { NextEvent } from "@/components/home/NextEvent";
 import { Mission } from "@/components/home/Mission";
 import { PhotoStrip } from "@/components/home/PhotoStrip";
 import { GiveCta } from "@/components/home/GiveCta";
-import { events } from "@/content/events";
+import { getEvents } from "@/lib/data";
 
-export default function Home() {
+// Re-check for new flyers at most once a minute.
+export const revalidate = 60;
+
+export default async function Home() {
+  const events = await getEvents();
   const builtAt = Date.now();
   return (
     <>

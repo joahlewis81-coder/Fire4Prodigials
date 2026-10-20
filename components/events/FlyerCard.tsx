@@ -4,10 +4,10 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import type { FlyerEvent } from "@/content/events";
 import { formatDate, nextSession } from "@/lib/events";
-import sizes from "@/content/images.json";
+import { flyerSize } from "@/lib/flyerSize";
 
 export function FlyerCard({ event, now, onOpen, past, ghost }: { event: FlyerEvent; now: number; onOpen: () => void; past?: boolean; ghost?: boolean }) {
-  const size = (sizes as Record<string, { width: number; height: number }>)[event.flyer];
+  const size = flyerSize(event);
   const s = nextSession(event, now);
   return (
     <button onClick={onOpen} className="group block w-full cursor-zoom-in text-left" aria-label={`Open ${event.title} flyer`}>

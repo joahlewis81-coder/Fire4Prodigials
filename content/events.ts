@@ -11,6 +11,9 @@ export type FlyerEvent = {
   address: string;
   summary: string;
   link?: string;
+  /** Flyer pixel size. Filled in automatically for built-in flyers. */
+  width?: number;
+  height?: number;
 };
 
 export const events: FlyerEvent[] = [

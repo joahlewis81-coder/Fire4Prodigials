@@ -9,7 +9,7 @@ import { formatDate, formatSession, nextSession, splitEvents } from "@/lib/event
 import { useNow } from "../events/useNow";
 import { Reveal, RevealWords } from "../Reveal";
 import { Button } from "../Button";
-import sizes from "@/content/images.json";
+import { flyerSize } from "@/lib/flyerSize";
 
 export function NextEvent({ events, builtAt }: { events: FlyerEvent[]; builtAt: number }) {
   const now = useNow(builtAt);
@@ -26,7 +26,7 @@ export function NextEvent({ events, builtAt }: { events: FlyerEvent[]; builtAt: 
 
   const s = nextSession(next, now);
   const f = formatSession(s);
-  const size = (sizes as Record<string, { width: number; height: number }>)[next.flyer];
+  const size = flyerSize(next);
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-ink py-28 md:py-40">

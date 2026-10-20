@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { EventsBoard } from "@/components/events/EventsBoard";
-import { events } from "@/content/events";
+import { getEvents } from "@/lib/data";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Events",
   description: "Upcoming Fire4Prodigals outreach events, worship nights, and recovery gatherings.",
 };
 
-export default function EventsPage() {
+export default async function EventsPage() {
+  const events = await getEvents();
   return (
     <>
       <PageHeader

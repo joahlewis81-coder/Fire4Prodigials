@@ -6,13 +6,13 @@ import { useEffect, useRef } from "react";
 import type { FlyerEvent } from "@/content/events";
 import { formatSession, icsFor, nextSession } from "@/lib/events";
 import { lockScroll } from "../SmoothScroll";
-import sizes from "@/content/images.json";
+import { flyerSize } from "@/lib/flyerSize";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export function FlyerModal({ event, now, onClose }: { event: FlyerEvent; now: number; onClose: () => void }) {
   const closeRef = useRef<HTMLButtonElement>(null);
-  const size = (sizes as Record<string, { width: number; height: number }>)[event.flyer];
+  const size = flyerSize(event);
   const session = nextSession(event, now);
   const isPast = event.sessions.every((s) => Date.parse(s.end ?? s.start) < now);
   const upcomingSessions = event.sessions.filter((s) => Date.parse(s.end ?? s.start) >= now);

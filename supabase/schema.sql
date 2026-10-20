@@ -39,15 +39,19 @@ language sql stable security definer set search_path = public as $$
   select exists (select 1 from public.editors where lower(email) = lower(auth.jwt() ->> 'email'));
 $$;
 
+-- Only signed-in users may call the editor check.
+revoke execute on function public.is_editor() from public, anon;
+grant execute on function public.is_editor() to authenticated;
+
 drop policy if exists "events are public" on public.events;
 create policy "events are public" on public.events for select using (true);
 
 drop policy if exists "editors manage events" on public.events;
-create policy "editors manage events" on public.events for all
+create policy "editors manage events" on public.events for all to authenticated
   using (public.is_editor()) with check (public.is_editor());
 
 drop policy if exists "editors can see editor list" on public.editors;
-create policy "editors can see editor list" on public.editors for select using (public.is_editor());
+create policy "editors can see editor list" on public.editors for select to authenticated using (public.is_editor());
 
 drop policy if exists "heartbeat readable" on public.heartbeat;
 create policy "heartbeat readable" on public.heartbeat for select using (true);
@@ -61,9 +65,9 @@ drop policy if exists "flyers are public" on storage.objects;
 create policy "flyers are public" on storage.objects for select using (bucket_id = 'flyers');
 
 drop policy if exists "editors upload flyers" on storage.objects;
-create policy "editors upload flyers" on storage.objects for insert
+create policy "editors upload flyers" on storage.objects for insert to authenticated
   with check (bucket_id = 'flyers' and public.is_editor());
 
 drop policy if exists "editors delete flyers" on storage.objects;
-create policy "editors delete flyers" on storage.objects for delete
+create policy "editors delete flyers" on storage.objects for delete to authenticated
   using (bucket_id = 'flyers' and public.is_editor());
